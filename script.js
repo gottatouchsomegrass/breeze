@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchbtn.addEventListener("click", function (event) {
     event.preventDefault();
-    const city1 = searchinpt.value;
+    const city1 = searchinpt.value.trim();
     getWeather(city1);
   });
 
