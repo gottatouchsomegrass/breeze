@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="flex items-center justify-center min-h-screen p-4 bg-blue-100">
+    <div class="w-full max-w-5xl p-6">
+      <h1 class="text-3xl font-bold text-center text-blue-600 md:text-4xl">
+        Breeze
+      </h1>
+      <p class="text-center text-gray-600">
+        Simple, beautiful weather forecasts
+      </p>
+
+      <div class="flex justify-center mt-4">
+        <input
+          type="text"
+          placeholder="Search location..."
+          class="w-full px-4 py-2 bg-white border border-gray-400 md:w-auto rounded-l-md focus:outline-none"
+          id="searchInput"
+        />
+        <button
+          class="px-4 py-2 text-white bg-black rounded-r-md"
+          id="searchButton"
+        >
+          Search
+        </button>
+      </div>
+
+      <div class="p-6 mt-6 bg-white shadow-md rounded-xl">
+        <h2 class="text-xl font-semibold md:text-2xl" id="city">London</h2>
+        <!-- City name -->
+        <p class="text-gray-500" id="date">Thursday, March 6, 2025</p>
+        <!--  Date -->
+        <div
+          class="flex flex-col items-center justify-between mt-4 md:flex-row"
+        >
+
+          <div class="flex flex-col items-center justify-center text-lg text-gray-500">
+            <img
+              class=" grayscale"
+              id="weatherIcon"
+              src=""
+            ></img>
+            <div id="weatherDesc"></div>
+            <div class="mt-2 text-4xl font-bold md:text-5xl" id="temp">12&deg;C</div>
+            <!-- Temperature -->
+          </div>
+          <!-- Weather description -->
+        </div>
+
+
+      </div>
+
+      <div class="p-6 mt-6 bg-white shadow-md rounded-xl">
+        <div class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
+          <div class="p-4 bg-gray-100 rounded-lg">
+            <p class="text-sm text-gray-500">Humidity</p>
+            <p class="text-lg font-semibold" id="humidityVal">76%</p>
+            <!-- Humidity value -->
+          </div>
+          <div class="p-4 bg-gray-100 rounded-lg">
+            <p class="text-sm text-gray-500">Wind</p>
+            <p class="text-lg font-semibold" id="windSpeedVal">15 km/h</p>
+            <!-- Wind speed value -->
+          </div>
+          <div class="p-4 bg-gray-100 rounded-lg">
+            <p class="text-sm text-gray-500">Feels Like</p>
+            <p class="text-lg font-semibold" id="feelsLikeTemp">10&deg;C</p>
+            <!-- Feels like temperature -->
+          </div>
+          <div class="p-4 bg-gray-100 rounded-lg">
+            <p class="text-sm text-gray-500">Pressure</p>
+            <p class="text-lg font-semibold" id="pressureVal">1012 hPa</p>
+            <!-- Pressure value -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
