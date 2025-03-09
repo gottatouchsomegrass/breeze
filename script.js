@@ -11,9 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let pressure = document.querySelector("#pressureVal");
   let desc = document.querySelector("#weatherDesc");
 
+  const previousCity = localStorage.getItem("city2");
+  if (previousCity) {
+    getWeather(previousCity);
+  }
+
   searchbtn.addEventListener("click", function (event) {
     event.preventDefault();
     const city1 = searchinpt.value.trim();
+    localStorage.setItem("city2", city1);
     getWeather(city1);
   });
 
